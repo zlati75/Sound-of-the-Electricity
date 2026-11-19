@@ -1,0 +1,11 @@
+<h2>Данни за поръчката</h2>
+<form class="form" action="order">
+  <label>Име и фамилия<input type="text" name="name" required></label>
+  <label>Телефон<input type="tel" name="phone" required></label>
+  <label>Адрес за доставка<input type="text" name="address" required></label>
+  <fieldset class="opts"><legend>Плащане</legend>
+    <label><input type="radio" name="pay" value="card" checked>Карта</label>
+    <label><input type="radio" name="pay" value="cod">Наложен платеж</label>
+  </fieldset>
+  <button>Поръчай</button>
+</form>

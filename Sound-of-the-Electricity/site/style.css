@@ -1,0 +1,50 @@
+:root{--bg:#0c0c0e;--panel:#16161a;--line:#2a2a31;--blue:#1b3fa0;--blue-hover:#2350c8;--neon:#f0ff00;--text:#ececf1;--muted:#9a9aa8;--head:Impact,"Arial Narrow",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{display:flex;flex-direction:column;min-height:100vh;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,"Segoe UI",Arial,sans-serif}
+main{flex:1;width:100%;max-width:1120px;margin:0 auto;padding:32px 20px 64px}
+h1,h2,h3,h4,legend,.logo{font-family:var(--head);font-weight:400;letter-spacing:.03em;line-height:1.2}
+h2{margin:32px 0 12px;font-size:2rem}
+a{color:var(--neon)}
+.muted,small,article p,footer p,footer a{color:var(--muted)}
+
+.bar{display:flex;align-items:center;gap:32px;padding:14px 24px;background:var(--blue);border-bottom:2px solid var(--neon)}
+.logo{color:var(--text);font-size:1.5rem;text-decoration:none}
+nav{display:flex;flex:1;gap:8px}
+nav a{padding:6px 14px;border:2px solid transparent;border-radius:8px;color:var(--text);text-decoration:none}
+nav a:hover,nav a.active{border-color:var(--neon)}
+
+.btn,button{display:inline-block;padding:9px 22px;background:var(--blue);color:var(--text);border:2px solid var(--neon);border-radius:8px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.btn:hover,button:hover{background:var(--blue-hover)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+article{display:flex;flex-direction:column;gap:8px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+article img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;background:#000}
+article .btn{align-self:flex-start;margin-top:auto}
+.price{color:var(--neon);font-size:1.3rem;font-weight:700}
+
+.notice{margin-bottom:20px;padding:12px 16px;background:var(--panel);border-left:4px solid var(--neon)}
+fieldset{margin-bottom:20px;padding:16px;border:1px solid var(--line);border-radius:10px}
+legend{padding:0 8px;font-size:1.3rem}
+fieldset h4{margin:12px 0 4px}
+.opts label{position:relative;display:inline-block;margin:4px 6px 4px 0;padding:7px 14px;border:2px solid var(--line);border-radius:8px;cursor:pointer}
+.opts label:has(:checked){background:var(--blue);border-color:var(--neon)}
+.opts label:has(:focus-visible){outline:3px solid var(--neon)}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+input:not([type=radio]):not([type=checkbox]),select{width:100%;padding:8px 10px;background:var(--bg);color:var(--text);border:2px solid var(--line);border-radius:8px;font:inherit}
+select{width:auto}
+.form{display:grid;gap:12px;max-width:420px}
+.gibson,.fender,.jackson{display:none}
+form:has([name=brand][value=gibson]:checked) .gibson,form:has([name=brand][value=fender]:checked) .fender,form:has([name=brand][value=jackson]:checked) .jackson{display:block}
+
+table{width:100%;margin:20px 0;border-collapse:collapse}
+td,th{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left}
+.total td{font-size:1.2rem;font-weight:700}
+.summary{margin-top:24px}
+
+footer{padding:32px 24px 16px;background:var(--panel);border-top:2px solid var(--neon)}
+footer .cols,.legal{max-width:1120px;margin:0 auto}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:32px}
+footer h4{margin-bottom:8px}
+footer a{display:block;text-decoration:none}
+footer a:hover{color:var(--neon)}
+.legal{display:flex;justify-content:space-between;gap:16px;margin-top:24px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}

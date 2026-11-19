@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+{{include:head}}
+<title>Къстъм – Sound of the Electricity</title>
+</head>
+<body>
+{{include:header}}
+<main>
+<h2 style="margin-top:0">Къстъм китара</h2>
+<p class="muted" style="margin-bottom:20px">Отговори на въпросите, изчисли цената и добави поръчката в кошницата. Изработката отнема около 4 седмици.</p>
+
+<form action="custom">
+  <fieldset class="opts">
+    <legend>1. Марка</legend>
+    <label><input type="radio" name="brand" value="gibson">Gibson</label>
+    <label><input type="radio" name="brand" value="fender">Fender</label>
+    <label><input type="radio" name="brand" value="jackson">Jackson</label>
+  </fieldset>
+
+  <fieldset class="opts">
+    <legend>2. Модел, цвят и хедсток</legend>
+    <div class="gibson">
+      <h4>Модел</h4>
+      <label><input type="radio" name="body" value="gibson-lespaul">Les Paul</label>
+      <label><input type="radio" name="body" value="gibson-sg">SG</label>
+      <label><input type="radio" name="body" value="gibson-v">Flying V</label>
+      <h4>Хедсток</h4>
+      <label><input type="radio" name="head" value="gibson-std">Стандартен Gibson</label>
+    </div>
+    <div class="fender">
+      <h4>Модел</h4>
+      <label><input type="radio" name="body" value="fender-strat">Stratocaster</label>
+      <label><input type="radio" name="body" value="fender-tele">Telecaster</label>
+      <h4>Хедсток</h4>
+      <label><input type="radio" name="head" value="fender-strat">Stratocaster</label>
+      <label><input type="radio" name="head" value="fender-tele">Telecaster</label>
+    </div>
+    <div class="jackson">
+      <h4>Модел</h4>
+      <label><input type="radio" name="body" value="jackson-dinky">Dinky</label>
+      <label><input type="radio" name="body" value="jackson-rhoads">Rhoads</label>
+      <label><input type="radio" name="body" value="jackson-superstrat">Superstrat</label>
+      <h4>Хедсток</h4>
+      <label><input type="radio" name="head" value="jackson-classic">Класически Jackson</label>
+      <label><input type="radio" name="head" value="jackson-reverse">Reverse Jackson</label>
+      <label><input type="radio" name="head" value="jackson-arrow">Arrow</label>
+    </div>
+    <h4>Цвят</h4>
+    <select name="color">
+      <option value="">Избери цвят</option>
+      <option value="black">Черно</option>
+      <option value="white">Бяло</option>
+      <option value="red">Червено</option>
+      <option value="blue">Синьо</option>
+      <option value="sunburst">Sunburst</option>
+      <option value="custom">Цвят по избор</option>
+    </select>
+  </fieldset>
+
+  <fieldset class="opts">
+    <legend>3. Колчета и пикъпи</legend>
+    <h4>Колчета</h4>
+    <label><input type="radio" name="tuners" value="normal">Стандартни</label>
+    <label><input type="radio" name="tuners" value="locking">Заключващи</label>
+    <h4>Пикъпи</h4>
+    <label><input type="radio" name="pickups" value="sss">SSS</label>
+    <label><input type="radio" name="pickups" value="ssh">SSH</label>
+    <label><input type="radio" name="pickups" value="hsh">HSH</label>
+    <label><input type="radio" name="pickups" value="hh">HH</label>
+    <label><input type="radio" name="pickups" value="p90">2× P90</label>
+    <h4>Тип пикъпи</h4>
+    <label><input type="radio" name="type" value="passive">Пасивни</label>
+    <label><input type="radio" name="type" value="active">Активни</label>
+  </fieldset>
+
+  <fieldset class="opts">
+    <legend>4. Допълнително</legend>
+    <label><input type="checkbox" name="case" value="1">Твърд калъф</label>
+    <label><input type="checkbox" name="strap" value="1">Каиш</label>
+    <label><input type="checkbox" name="picks" value="1">Персонализирани медиатори (12 бр.)</label>
+    <label><input type="checkbox" name="cable" value="1">Кабел 3 м</label>
+    <label><input type="checkbox" name="strings" value="1">3 комплекта резервни струни</label>
+    <label><input type="checkbox" name="tuner" value="1">Clip-on тунер</label>
+    <label><input type="checkbox" name="setup" value="1">Професионален сетъп</label>
+  </fieldset>
+
+  <button name="calc" value="1">Изчисли цената</button>
+  <button formaction="addc">Добави в кошницата</button>
+</form>
+
+{{summary}}
+</main>
+{{include:footer}}
+</body>
+</html>
